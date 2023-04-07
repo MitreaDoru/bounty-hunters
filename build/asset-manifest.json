@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bounty-hunters/static/css/main.eae41091.chunk.css",
-    "main.js": "/bounty-hunters/static/js/main.e3c10184.chunk.js",
-    "main.js.map": "/bounty-hunters/static/js/main.e3c10184.chunk.js.map",
+    "main.css": "/bounty-hunters/static/css/main.8135b212.chunk.css",
+    "main.js": "/bounty-hunters/static/js/main.7351e01f.chunk.js",
+    "main.js.map": "/bounty-hunters/static/js/main.7351e01f.chunk.js.map",
     "runtime-main.js": "/bounty-hunters/static/js/runtime-main.0e3ace16.js",
     "runtime-main.js.map": "/bounty-hunters/static/js/runtime-main.0e3ace16.js.map",
     "static/js/2.5fe6dcfa.chunk.js": "/bounty-hunters/static/js/2.5fe6dcfa.chunk.js",
     "static/js/2.5fe6dcfa.chunk.js.map": "/bounty-hunters/static/js/2.5fe6dcfa.chunk.js.map",
     "index.html": "/bounty-hunters/index.html",
-    "static/css/main.eae41091.chunk.css.map": "/bounty-hunters/static/css/main.eae41091.chunk.css.map",
+    "static/css/main.8135b212.chunk.css.map": "/bounty-hunters/static/css/main.8135b212.chunk.css.map",
     "static/js/2.5fe6dcfa.chunk.js.LICENSE.txt": "/bounty-hunters/static/js/2.5fe6dcfa.chunk.js.LICENSE.txt",
     "static/media/Ale.89c51362.jpg": "/bounty-hunters/static/media/Ale.89c51362.jpg",
     "static/media/Luci.f482f861.jpg": "/bounty-hunters/static/media/Luci.f482f861.jpg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.0e3ace16.js",
     "static/js/2.5fe6dcfa.chunk.js",
-    "static/css/main.eae41091.chunk.css",
-    "static/js/main.e3c10184.chunk.js"
+    "static/css/main.8135b212.chunk.css",
+    "static/js/main.7351e01f.chunk.js"
   ]
 }

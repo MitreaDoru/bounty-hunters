@@ -14,11 +14,11 @@ function updateDataEmployees(key, nume, prenume, cod, luni, telefon, masina, hir
     });
 }
 
-function updateDataSubscription(key, carNumber, uniqeCode, date, expirationDate, hour, payed) {
+function updateDataSubscription(key, carNumber, uniqueCode, date, expirationDate, hour, payed) {
     set(ref(db, 'subscription/' + key), {
         id: key,
         carNumber,
-        uniqeCode,
+        uniqueCode,
         date,
         expirationDate,
         hour,
