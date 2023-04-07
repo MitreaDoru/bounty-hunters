@@ -12,16 +12,26 @@ const HomeHeader = () => {
     const { profiles } = useData(key, 'subscription')
     const { profiles: employeesProfiles } = useData(key, 'employees')
     let countSub = 0;
+    let totalCountSub = 0;
     let countEmployees = 0;
+    let totalCountEmployees = 0;
     profiles.map(profile => {
+        if (profile.owner) {
+            totalCountSub--
+        }
         if (profile.pay === 'platit') {
             countSub++
         }
+        return totalCountSub++
     })
     employeesProfiles.map(profile => {
+        if (profile.owner) {
+            totalCountEmployees--
+        }
         if (profile.hire === 'angajat') {
             countEmployees++
         }
+        return totalCountEmployees++
     })
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -51,8 +61,8 @@ const HomeHeader = () => {
             <header className={style.header}>
                 <div className={style.count}>
                     <Link to="/bounty-hunters" className={style.logo}>B | H</Link>
-                    <div>Angajati: {countEmployees}</div>
-                    <div>Abonamente: {countSub}</div>
+                    <div>Employees: {countEmployees}/{totalCountEmployees}</div>
+                    <div>Subscribers: {countSub}/{totalCountSub}</div>
 
                 </div>
                 <nav className={style.navigation}>
