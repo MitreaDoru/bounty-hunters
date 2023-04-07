@@ -1,6 +1,5 @@
 .contact {
-  height: auto;
-  background: bisque;
+  height: 100vh;
 }
 .ale,
 .luci {
@@ -17,6 +16,9 @@
   border-radius: 20px;
   width: 100%;
   height: auto;
+}
+.info p {
+  color: white;
 }
 @media screen and (min-width: 600px) {
   .ale img,

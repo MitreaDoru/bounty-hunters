@@ -1,5 +1,5 @@
 .subscription {
-  height: auto;
+  height: 100vh;
   background: linear-gradient(black, aqua, white);
 }
 .title {
@@ -83,5 +83,10 @@
 @media screen and (min-width: 900px) {
   .subscription .grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1730px) {
+  .subscription {
+    height: auto;
   }
 }

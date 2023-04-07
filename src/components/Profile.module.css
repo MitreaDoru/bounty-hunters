@@ -1,13 +1,13 @@
 .profile {
   width: 100%;
   height: 100vh;
-  background-color: bisque;
 }
 .profile .content {
   padding-top: 70px;
 }
 .profile .content p {
   margin-left: 20px;
+  color: white;
 }
 .profile .content button {
   width: 5rem;

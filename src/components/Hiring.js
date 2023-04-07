@@ -6,7 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 import { db } from '../firebase'
 import { ref, set, } from 'firebase/database'
-
+import useData from '../use-data';
 
 const Hiring = () => {
 
@@ -17,7 +17,7 @@ const Hiring = () => {
     const [telefon, setTelefon] = useState('')
     const [masina, setMasina] = useState('')
     const [key, setKey] = useState()
-
+    const { personalProfile } = useData(key, 'employees')
 
     const dataAddOn = (e) => {
         e.preventDefault()
@@ -81,6 +81,7 @@ const Hiring = () => {
                 <input type='text' name='telefon' placeholder='Telefon' value={telefon} onChange={(e) => setTelefon(e.target.value)}></input>
                 <label htmlFor='masina'>Masina de drift</label>
                 <input type='text' name='masina' placeholder='Masina' value={masina} onChange={(e) => setMasina(e.target.value)}></input>
+                {personalProfile && <p>Se reseteaza datele daca dai iar submit la alte date</p>}
                 <button type='submit'>Submit</button>
             </form>}
         </div >

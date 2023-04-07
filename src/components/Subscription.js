@@ -80,6 +80,7 @@ const Subscription = () => {
         <input type='date' name='date' value={date} onChange={(e) => setDate(e.target.value)} ></input>
         <label htmlFor='date'>Data Expirare</label>
         <input type='date' name='date' value={expirationDate} onChange={(e) => setExpirationDate(e.target.value)} ></input>
+        {personalProfile && <p>Se reseteaza datele daca dai iar submit la alte date</p>}
         <button type='submit'>Submit</button>
     </form>
 

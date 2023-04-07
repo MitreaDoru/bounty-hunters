@@ -1,6 +1,6 @@
 .hiring {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background: linear-gradient(black, white);
 }
 .image {
@@ -60,4 +60,9 @@
 .description button:hover {
   color: red;
   cursor: pointer;
+}
+@media screen and (min-width: 1630px) {
+  .hiring {
+    height: auto;
+  }
 }
