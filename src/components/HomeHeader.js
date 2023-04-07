@@ -13,9 +13,16 @@ const HomeHeader = () => {
     const { profiles: employeesProfiles } = useData(key, 'employees')
     let countSub = 0;
     let countEmployees = 0;
-    console.log(profiles);
-    profiles.map(profile => countSub++)
-    employeesProfiles.map(profile => countEmployees++)
+    profiles.map(profile => {
+        if (profile.pay === 'platit') {
+            countSub++
+        }
+    })
+    employeesProfiles.map(profile => {
+        if (profile.hire === 'angajat') {
+            countEmployees++
+        }
+    })
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -56,7 +63,7 @@ const HomeHeader = () => {
                             <Link to='/bounty-hunters/cars'>Cars</Link>
                             <Link to='/bounty-hunters/subscription'>Subscription</Link>
                             <Link to='/bounty-hunters/contact'>Contact</Link>
-                            {showLogout ? <Link to='/profile'>Profile</Link> : ''}
+                            {showLogout ? <Link to='/bounty-hunters/profile'>Profile</Link> : ''}
                             {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
                         </li>
                     </ul>
@@ -70,7 +77,7 @@ const HomeHeader = () => {
                                     <li><Link to='/bounty-hunters/cars'>Cars</Link></li>
                                     <li><Link to='/bounty-hunters/subscription'>Subscription</Link></li>
                                     <li><Link to='/bounty-hunters/contact'>Contact</Link></li>
-                                    {showLogout ? <li> <Link to='/profile'>Profile</Link></li> : ''}
+                                    {showLogout ? <li> <Link to='/bounty-hunters/profile'>Profile</Link></li> : ''}
                                     {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
                                 </ul>
                             </li>

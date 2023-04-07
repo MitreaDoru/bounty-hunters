@@ -3,6 +3,7 @@ import { ref, set, remove } from 'firebase/database';
 
 function updateDataEmployees(key, nume, prenume, cod, luni, telefon, masina, hired) {
     set(ref(db, 'employees/' + key), {
+        id: key,
         nume: nume,
         prenume: prenume,
         CNP: cod,
@@ -15,6 +16,7 @@ function updateDataEmployees(key, nume, prenume, cod, luni, telefon, masina, hir
 
 function updateDataSubscription(key, carNumber, uniqeCode, date, expirationDate, hour, payed) {
     set(ref(db, 'subscription/' + key), {
+        id: key,
         carNumber,
         uniqeCode,
         date,

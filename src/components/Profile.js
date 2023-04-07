@@ -8,13 +8,6 @@ import useData from '../use-data';
 import userData from '../userData';
 
 
-
-// import { onValue, ref, set, remove } from 'firebase/database';
-// import getEmployees from '../getUid';
-// const newPost = getEmployees.add('employees')
-// setProfiles(newPost)
-// setPersonalProfile(...newPost.filter(profile => profile.id === key))
-
 const Profile = () => {
 
     const [key, setKey] = useState()
@@ -46,10 +39,10 @@ const Profile = () => {
         )
     })
 
-
+    console.log(profiles);
     return (
         <div className={style.profile}>
-            {personalProfile.owner ? '' : <div className={style.content}>
+            {personalProfile && (personalProfile.owner ? '' : <div className={style.content}>
 
                 <p>Nume: {personalProfile ? personalProfile.nume : ''}</p>
                 <p>Prenume: {personalProfile ? personalProfile.prenume : ''}</p>
@@ -58,10 +51,10 @@ const Profile = () => {
                 <p>Luni: {personalProfile ? personalProfile.luni : ''}</p>
                 <p>Masina: {personalProfile ? personalProfile.masina : ''}</p>
                 <p>Angajat: {personalProfile ? personalProfile.hire : ''}</p>
-            </div>}
+            </div>)}
             <div className={style.grid}>
 
-                {personalProfile.owner ? allProfiles : ''}
+                {personalProfile && (personalProfile.owner ? allProfiles : '')}
             </div>
 
         </div>

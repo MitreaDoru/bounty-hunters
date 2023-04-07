@@ -34,7 +34,7 @@ const Subscription = () => {
             date,
             expirationDate,
             hour,
-            pay: ''
+            pay: 'neplatit'
         });
         setCarNumber('')
         setUniqueCode('')
@@ -53,7 +53,7 @@ const Subscription = () => {
                 <p>Data expirare: {profile ? profile.expirationDate : ''}</p>
                 <p>Pay: {profile ? profile.pay : ''}</p>
                 <button onClick={() => { userData.removeData(profile.id, 'subscription/') }}>Delete</button>
-                <button onClick={() => { alert('Are you sure'); userData.updateDataSubscription(profile.id, profile.carNumber, profile.uniqueCode, profile.date, profile.expirationDate, profile.hour, 'platit') }}>Platit</button>
+                <button onClick={() => { userData.updateDataSubscription(profile.id, profile.carNumber, profile.uniqueCode, profile.date, profile.expirationDate, profile.hour, 'platit') }}>Platit</button>
             </div>
         )
 

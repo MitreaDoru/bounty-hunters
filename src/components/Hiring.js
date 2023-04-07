@@ -28,7 +28,8 @@ const Hiring = () => {
             luni: luni,
             telefon: telefon,
             masina: masina,
-            hire: 'neangajat'
+            hire: 'neangajat',
+            owner: ''
         });
         setNume('')
         setPrenume('')
