@@ -59,8 +59,8 @@ const HomeHeader = () => {
     return (
         <>
             <header className={style.header}>
+                <Link to="/bounty-hunters" className={style.logo}>BountyHunters</Link>
                 <div className={style.count}>
-                    <Link to="/bounty-hunters" className={style.logo}>B | H</Link>
                     <div>Employees: {countEmployees}/{totalCountEmployees}</div>
                     <div>Subscribers: {countSub}/{totalCountSub}</div>
 
