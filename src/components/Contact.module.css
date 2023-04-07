@@ -1,0 +1,34 @@
+.contact {
+  height: auto;
+  background: bisque;
+}
+.ale,
+.luci {
+  border-radius: 10px;
+  padding: 20px;
+}
+.ale p,
+.luci p {
+  margin-left: 20px;
+}
+.ale img,
+.luci img {
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 600px) {
+  .ale img,
+  .luci img {
+    width: 60%;
+  }
+  .ale,
+  .luci {
+    display: flex;
+    flex-direction: row;
+  }
+  .info {
+    margin-top: 50px;
+  }
+}

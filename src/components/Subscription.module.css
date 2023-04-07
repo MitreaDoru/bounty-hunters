@@ -1,0 +1,87 @@
+.subscription {
+  height: auto;
+  background: linear-gradient(black, aqua, white);
+}
+.title {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.title img {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+  border: 2px solid aqua;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description p {
+  padding: 15px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.info input {
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 1.5rem;
+  border-radius: 10px;
+}
+.info button {
+  width: 4rem;
+  height: 1.5rem;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+.info button:hover {
+  cursor: pointer;
+  color: red;
+}
+/* .subscription .grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+} */
+.subscription .content {
+  margin-left: 20px;
+}
+.subscription .content button {
+  width: 4rem;
+  height: 1.5rem;
+  margin-left: 20px;
+  background-color: black;
+  border: black;
+  border-radius: 10px;
+  color: white;
+}
+
+.subscription .content button:hover {
+  cursor: pointer;
+  color: red;
+}
+@media screen and (min-width: 500px) {
+  .subscription .grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 700px) {
+  .subscription .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .subscription .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

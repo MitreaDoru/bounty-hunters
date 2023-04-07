@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  height: 2.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navigation .content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation .content a {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+.navigation button {
+  border: aqua;
+  margin-right: 1.5rem;
+  width: 100%;
+  height: 2.5rem;
+  font-size: large;
+  background-color: black;
+  color: white;
+}

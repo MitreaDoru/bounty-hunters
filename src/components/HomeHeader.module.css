@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  height: 4rem;
+  background-color: black;
+  color: white;
+
+  position: fixed;
+}
+.header .logo {
+  margin-left: 4rem;
+  text-decoration: none;
+  color: white;
+}
+.count {
+  display: flex;
+  justify-content: space-around;
+}
+.navigation .content {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation .content a,
+.navigation .content button {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+.navigation .content button {
+  border: aqua;
+  margin-right: 1.5rem;
+  width: 100%;
+  height: 2.5rem;
+  font-size: large;
+  background-color: black;
+  color: white;
+}
+
+.navigation .menuBtn ul {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+.navigation .menuBtn ul a {
+  text-decoration: none;
+  color: white;
+  margin-right: 4rem;
+}
+.navigation .menuBtn ul ul {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+}
+.navigation .menuBtn ul li:hover > ul {
+  display: inherit;
+}
+
+.header .logo:hover {
+  color: red;
+  cursor: pointer;
+}
+.navigation .menuBtn a:hover {
+  color: red;
+}
+.navigation .content a:hover {
+  color: red;
+}
+.navigation .menuBtn ul ul {
+  width: 5rem;
+
+  padding-top: 10px;
+  justify-content: center;
+}
+.navigation .menuBtn ul ul li {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation .content {
+    display: flex;
+  }
+  .menuBtn {
+    display: none;
+  }
+}

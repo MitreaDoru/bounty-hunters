@@ -1,0 +1,26 @@
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+  border: 1px solid bisque;
+  border-radius: 10px;
+}
+.container .form .username,
+.container .form .password {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container input {
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+}

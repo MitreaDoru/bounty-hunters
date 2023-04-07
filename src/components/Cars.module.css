@@ -1,0 +1,24 @@
+.content {
+  background: linear-gradient(black, rgb(255, 0, 0));
+}
+.title {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid red;
+}
+.title img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cars {
+  padding: 20px;
+}
+.cars img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+
+  border-radius: 20px;
+  border: 2px solid aqua;
+}
