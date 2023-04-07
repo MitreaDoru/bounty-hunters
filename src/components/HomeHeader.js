@@ -32,7 +32,7 @@ const HomeHeader = () => {
 
     const handleLogout = () => {
         signOut(auth).then(() => {
-            navigate("/home");
+            navigate("/bounty-hunters/home");
         }).catch((error) => {
 
         });
@@ -43,7 +43,7 @@ const HomeHeader = () => {
         <>
             <header className={style.header}>
                 <div className={style.count}>
-                    <Link to="/home" className={style.logo}>B | H</Link>
+                    <Link to="/bounty-hunters" className={style.logo}>B | H</Link>
                     <div>Angajati: {countEmployees}</div>
                     <div>Abonamente: {countSub}</div>
 
@@ -51,27 +51,27 @@ const HomeHeader = () => {
                 <nav className={style.navigation}>
                     <ul className={style.content}>
                         <li>
-                            <Link to="/hiring">Hiring</Link>
-                            <Link to='/about'>About</Link>
-                            <Link to='/cars'>Cars</Link>
-                            <Link to='/subscription'>Subscription</Link>
-                            <Link to='/contact'>Contact</Link>
+                            <Link to="/bounty-hunters/hiring">Hiring</Link>
+                            <Link to='/bounty-hunters/about'>About</Link>
+                            <Link to='/bounty-hunters/cars'>Cars</Link>
+                            <Link to='/bounty-hunters/subscription'>Subscription</Link>
+                            <Link to='/bounty-hunters/contact'>Contact</Link>
                             {showLogout ? <Link to='/profile'>Profile</Link> : ''}
-                            {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/login'>Login</Link>}
+                            {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
                         </li>
                     </ul>
                     <div className={style.menuBtn}>
                         <ul>
                             <li>
-                                <Link to='/home'> Menu</Link>
+                                <Link to='/bounty-hunters/home'> Menu</Link>
                                 <ul >
-                                    <li><Link to="/hiring">Hiring</Link></li>
-                                    <li><Link to='/about'>About</Link></li>
-                                    <li><Link to='/cars'>Cars</Link></li>
-                                    <li><Link to='/subscription'>Subscription</Link></li>
-                                    <li><Link to='/contact'>Contact</Link></li>
+                                    <li><Link to="/bounty-hunters/hiring">Hiring</Link></li>
+                                    <li><Link to='/bounty-hunters/about'>About</Link></li>
+                                    <li><Link to='/bounty-hunters/cars'>Cars</Link></li>
+                                    <li><Link to='/bounty-hunters/subscription'>Subscription</Link></li>
+                                    <li><Link to='/bounty-hunters/contact'>Contact</Link></li>
                                     {showLogout ? <li> <Link to='/profile'>Profile</Link></li> : ''}
-                                    {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/login'>Login</Link>}
+                                    {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
                                 </ul>
                             </li>
                         </ul>

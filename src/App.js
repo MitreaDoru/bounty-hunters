@@ -26,24 +26,25 @@ import Profile from "./components/Profile";
 // );
 const router = createBrowserRouter([
   {
-    path: '/', element: <AuthHeader />, children: [
+    path: '/bounty-hunters', element: <AuthHeader />, children: [
 
-      { path: '/signin', element: <Signin /> },
-      { path: '/login', element: <Login /> }
+      { path: '/bounty-hunters/signin', element: <Signin /> },
+      { path: '/bounty-hunters/login', element: <Login /> }
     ],
   },
   {
-    path: '/', element: <HomeHeader />, children: [
-      { path: '/home', element: <HomeContent /> },
-      { path: '/hiring', element: <Hiring /> },
-      { path: '/about', element: <About /> },
-      { path: '/cars', element: <Cars /> },
-      { path: '/subscription', element: <Subscription /> },
-      { path: '/contact', element: <Contact /> },
-      { path: '/profile', element: <Profile /> }
+    path: '/bounty-hunters/', element: <HomeHeader />, children: [
+      { path: '/bounty-hunters/', element: <Home /> },
+      { path: '/bounty-hunters/home', element: <HomeContent /> },
+      { path: '/bounty-hunters/hiring', element: <Hiring /> },
+      { path: '/bounty-hunters/about', element: <About /> },
+      { path: '/bounty-hunters/cars', element: <Cars /> },
+      { path: '/bounty-hunters/subscription', element: <Subscription /> },
+      { path: '/bounty-hunters/contact', element: <Contact /> },
+      { path: '/bounty-hunters/profile', element: <Profile /> }
     ]
   },
-  { path: '/home', element: <Home /> },
+  // { path: '/bounty-hunters/home', element: <Home /> },
 
 ])
 

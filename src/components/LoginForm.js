@@ -14,7 +14,7 @@ const LoginForm = () => {
 
         signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
             const user = userCredential.user
-            navigate('/home')
+            navigate('/bounty-hunters/home')
             console.log(user);
         }).catch((error) => {
             console.log(error.code, error.message);
