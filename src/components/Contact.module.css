@@ -12,10 +12,16 @@
 }
 .ale img,
 .luci img {
-  margin-top: 50px;
+  margin-top: 60px;
   border-radius: 20px;
   width: 100%;
   height: auto;
+}
+.ale img {
+  border: 2px solid white;
+}
+.luci img {
+  border: 2px solid red;
 }
 .info p {
   color: white;

@@ -12,7 +12,8 @@
   width: 100%;
   height: auto;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 60px;
+  border: 2px solid white;
 }
 .location {
   display: flex;
