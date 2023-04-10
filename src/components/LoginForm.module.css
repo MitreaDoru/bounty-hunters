@@ -23,6 +23,16 @@ section {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
   color: rgb(255, 255, 255);
+  margin-right: 5px;
+}
+.container .form .button a {
+  list-style: none;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 14px;
 }
 .container .form .username,
 .container .form .password {
@@ -31,7 +41,10 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
+.container .form p {
+  color: red;
+  font-size: 13px;
+}
 .container input {
   height: 25px;
   padding-left: 2px;

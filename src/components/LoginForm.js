@@ -1,24 +1,33 @@
 import style from "./LoginForm.module.css"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { auth } from '../firebase'
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import { getAuth } from "firebase/auth";
 const LoginForm = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
         signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-            const user = userCredential.user
-            navigate('/bounty-hunters/home')
-            console.log(user);
+            const authUser = getAuth();
+            const emailVerified = authUser.currentUser.emailVerified;
+            if (emailVerified) {
+
+                navigate('/bounty-hunters/home')
+                setError(false)
+            } else {
+                auth.signOut()
+                navigate('/bounty-hunters/login')
+                alert('Verify your email')
+            }
         }).catch((error) => {
-            console.log(error.code, error.message);
+            setError(true)
         })
+
     }
 
     return (
@@ -33,9 +42,10 @@ const LoginForm = () => {
                         <label htmlFor="password">Password</label>
                         <input type="password" required id="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
                     </div>
+                    {error && <p>Wrong email or password</p>}
                     <div className={style.button}>
                         <button type="submit">Login</button>
-
+                        <Link to='/bounty-hunters/home'>Go offline</Link>
                     </div>
                 </form>
             </div>

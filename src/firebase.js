@@ -26,5 +26,6 @@ if (firebase.apps.length === 0) {
 const db = getDatabase()
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
+
 export { db }
 export default app

@@ -19,7 +19,6 @@ const useData = (key, folder) => {
                     id: key,
                     ...data[key]
                 }))
-                console.log(newPost);
                 setProfiles(newPost)
                 setPersonalProfile(...newPost.filter(profile => profile.id === key))
             } else {

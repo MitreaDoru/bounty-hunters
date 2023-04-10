@@ -17,6 +17,7 @@ const Profile = () => {
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
+                console.log(user);
                 setKey(user.uid)
             }
         });
@@ -39,7 +40,7 @@ const Profile = () => {
         )
     })
 
-    console.log(profiles);
+
     return (
         <div className={style.profile}>
             {personalProfile && (personalProfile.owner ? '' : <div className={style.content}>
