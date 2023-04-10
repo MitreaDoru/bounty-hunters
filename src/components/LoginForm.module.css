@@ -23,7 +23,7 @@ section {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
   color: rgb(255, 255, 255);
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .container .form .button a {
   list-style: none;

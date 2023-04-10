@@ -90,7 +90,7 @@ const SigninForm = () => {
                     </div> */}
 
                     <div className={style.button}>
-                        <button disabled={!formIsValid} type="submit">Register</button>
+                        <button disabled={!formIsValid} type="submit">Sign up</button>
 
                     </div>
                 </form>

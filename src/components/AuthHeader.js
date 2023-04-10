@@ -7,10 +7,10 @@ const AuthHeader = () => {
                 <nav className={style.navigation}>
                     <ul className={style.content}>
                         <li>
-                            <Link to="/bounty-hunters/login">Login</Link>
+                            <Link to="/bounty-hunters/login">Sign in</Link>
                         </li>
                         <li>
-                            <Link to='/bounty-hunters/signin'>Signin</Link>
+                            <Link to='/bounty-hunters/signin'>Sign up</Link>
 
                         </li>
                     </ul>

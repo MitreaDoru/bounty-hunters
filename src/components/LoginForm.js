@@ -44,8 +44,8 @@ const LoginForm = () => {
                     </div>
                     {error && <p>Wrong email or password</p>}
                     <div className={style.button}>
-                        <button type="submit">Login</button>
-                        <Link to='/bounty-hunters/home'>Go offline</Link>
+                        <Link to='/bounty-hunters/home'>Continue offline</Link>
+                        <button type="submit">Sign in</button>
                     </div>
                 </form>
             </div>

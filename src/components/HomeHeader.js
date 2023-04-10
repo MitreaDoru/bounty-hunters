@@ -74,7 +74,7 @@ const HomeHeader = () => {
                             <Link to='/bounty-hunters/subscription'>Subscription</Link>
                             <Link to='/bounty-hunters/contact'>Contact</Link>
                             {showLogout ? <Link to='/bounty-hunters/profile'>Profile</Link> : ''}
-                            {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
+                            {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Sign in</Link>}
                         </li>
                     </ul>
                     <div className={style.menuBtn}>
