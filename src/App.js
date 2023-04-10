@@ -1,7 +1,7 @@
 
 import "./index.css";
 import {
-  createBrowserRouter, Router, RouterProvider,
+  createBrowserRouter, RouterProvider,
   // Route,
   // createRoutesFromElements, 
 } from 'react-router-dom'
@@ -52,10 +52,10 @@ const router = createBrowserRouter([
 const App = () => {
 
   return (
-    <Router basename='/bounty-hunters/home'>
 
-      <RouterProvider router={router} />
-    </Router>
+
+    <RouterProvider router={router} />
+
   );
 };
 
