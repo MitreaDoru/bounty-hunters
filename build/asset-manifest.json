@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/bounty-hunters/static/css/main.82f85427.chunk.css",
+    "main.js": "/bounty-hunters/static/js/main.38f65bdd.chunk.js",
+    "main.js.map": "/bounty-hunters/static/js/main.38f65bdd.chunk.js.map",
+    "runtime-main.js": "/bounty-hunters/static/js/runtime-main.0e3ace16.js",
+    "runtime-main.js.map": "/bounty-hunters/static/js/runtime-main.0e3ace16.js.map",
+    "static/js/2.98fc1083.chunk.js": "/bounty-hunters/static/js/2.98fc1083.chunk.js",
+    "static/js/2.98fc1083.chunk.js.map": "/bounty-hunters/static/js/2.98fc1083.chunk.js.map",
+    "index.html": "/bounty-hunters/index.html",
+    "static/css/main.82f85427.chunk.css.map": "/bounty-hunters/static/css/main.82f85427.chunk.css.map",
+    "static/js/2.98fc1083.chunk.js.LICENSE.txt": "/bounty-hunters/static/js/2.98fc1083.chunk.js.LICENSE.txt",
+    "static/media/Ale.4d1face9.jpg": "/bounty-hunters/static/media/Ale.4d1face9.jpg",
+    "static/media/Luci.e31ae4ba.jpg": "/bounty-hunters/static/media/Luci.e31ae4ba.jpg",
+    "static/media/Service-map.dd4fb970.jpg": "/bounty-hunters/static/media/Service-map.dd4fb970.jpg",
+    "static/media/about.0959e75c.jpg": "/bounty-hunters/static/media/about.0959e75c.jpg",
+    "static/media/car1.eed2b26e.jpg": "/bounty-hunters/static/media/car1.eed2b26e.jpg",
+    "static/media/car2.ef07e83d.jpg": "/bounty-hunters/static/media/car2.ef07e83d.jpg",
+    "static/media/car3.6cfcc087.jpg": "/bounty-hunters/static/media/car3.6cfcc087.jpg",
+    "static/media/car4.fc06c81f.jpg": "/bounty-hunters/static/media/car4.fc06c81f.jpg",
+    "static/media/car5.8258b4d4.jpg": "/bounty-hunters/static/media/car5.8258b4d4.jpg",
+    "static/media/car6.e02190a9.jpg": "/bounty-hunters/static/media/car6.e02190a9.jpg",
+    "static/media/car7.b61f5b6d.jpg": "/bounty-hunters/static/media/car7.b61f5b6d.jpg",
+    "static/media/cars.7f22cba9.jpg": "/bounty-hunters/static/media/cars.7f22cba9.jpg",
+    "static/media/hiring.250d224a.jpg": "/bounty-hunters/static/media/hiring.250d224a.jpg",
+    "static/media/home-sedinta.c3e41f85.jpg": "/bounty-hunters/static/media/home-sedinta.c3e41f85.jpg",
+    "static/media/home1.fe73a11f.jpg": "/bounty-hunters/static/media/home1.fe73a11f.jpg",
+    "static/media/home2.ee533004.jpg": "/bounty-hunters/static/media/home2.ee533004.jpg",
+    "static/media/home3.72b41f5a.jpg": "/bounty-hunters/static/media/home3.72b41f5a.jpg",
+    "static/media/home4.df3039c5.jpg": "/bounty-hunters/static/media/home4.df3039c5.jpg",
+    "static/media/logo.ccf3a181.jpg": "/bounty-hunters/static/media/logo.ccf3a181.jpg",
+    "static/media/subscription.c9157118.jpg": "/bounty-hunters/static/media/subscription.c9157118.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e3ace16.js",
+    "static/js/2.98fc1083.chunk.js",
+    "static/css/main.82f85427.chunk.css",
+    "static/js/main.38f65bdd.chunk.js"
+  ]
+}

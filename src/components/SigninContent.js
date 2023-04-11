@@ -42,6 +42,7 @@ const SigninContent = () => {
                         <input type="password" required id="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
                     </div>
                     {error && <p>Wrong email or password</p>}
+                    <Link to='/bounty-hunters/resetpassword'>Forget password?</Link>
                     <div className={style.button}>
                         <Link to='/bounty-hunters'>Continue offline</Link>
                         <button type="submit">Sign in</button>
