@@ -18,8 +18,8 @@
   justify-content: center;
 }
 .count div {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .navigation .content {
   width: 100%;
@@ -34,6 +34,7 @@
   text-decoration: none;
   color: white;
   margin-right: 30px;
+  white-space: nowrap;
 }
 .navigation .content button {
   border: aqua;
@@ -56,6 +57,7 @@
   text-decoration: none;
   color: white;
   margin-right: 4rem;
+  white-space: nowrap;
 }
 .navigation .menuBtn ul ul {
   position: absolute;
@@ -86,7 +88,7 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 630px) {
   .navigation .content {
     display: flex;
   }
