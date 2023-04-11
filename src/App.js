@@ -1,41 +1,31 @@
 
 import "./index.css";
-import {
-  createBrowserRouter, RouterProvider,
-  // Route,
-  // createRoutesFromElements, 
-} from 'react-router-dom'
-import Signin from './pages/Signin';
-import Home from './pages/Home';
-import Login from "./pages/Login";
-import AuthHeader from "./components/AuthHeader";
-import HomeHeader from "./components/HomeHeader";
-import HomeContent from "./components/HomeContent";
-import Hiring from "./components/Hiring";
-import About from "./components/About";
-import Cars from "./components/Cars";
-import Subscription from "./components/Subscription";
-import Contact from "./components/Contact";
-import Profile from "./components/Profile";
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom'
 
-// const routeDefinition = createRoutesFromElements(
-//   <Route>
-//     <Route path="/" element={<Auth />} />
-//     <Route path="/home" element={<Home />} />
-//   </Route>
-// );
+import AuthHeader from "./components/headers/AuthHeader";
+import HomeHeader from "./components/headers/HomeHeader";
+import About from "./pages/About";
+import Cars from "./pages/Cars";
+import Contact from "./pages/Contact";
+import Hiring from "./pages/Hiring";
+import Home from './pages/Home';
+import Profile from "./pages/Profile";
+import Signin from "./pages/Signin";
+import Signup from './pages/Signup';
+import Subscription from "./pages/Subscription";
+
+
 const router = createBrowserRouter([
   {
     path: '/bounty-hunters', element: <AuthHeader />, children: [
 
-      { path: '/bounty-hunters/signin', element: <Signin /> },
-      { path: '/bounty-hunters/login', element: <Login /> }
+      { path: '/bounty-hunters/signup', element: <Signup /> },
+      { path: '/bounty-hunters/signin', element: <Signin /> }
     ],
   },
   {
     path: '/bounty-hunters/', element: <HomeHeader />, children: [
       { path: '/bounty-hunters/', element: <Home /> },
-      { path: '/bounty-hunters/home', element: <HomeContent /> },
       { path: '/bounty-hunters/hiring', element: <Hiring /> },
       { path: '/bounty-hunters/about', element: <About /> },
       { path: '/bounty-hunters/cars', element: <Cars /> },
@@ -44,18 +34,13 @@ const router = createBrowserRouter([
       { path: '/bounty-hunters/profile', element: <Profile /> }
     ]
   },
-  // { path: '/bounty-hunters/home', element: <Home /> },
+
 
 ])
 
-// const router = createBrowserRouter(routeDefinition)
 const App = () => {
-
   return (
-
-
     <RouterProvider router={router} />
-
   );
 };
 

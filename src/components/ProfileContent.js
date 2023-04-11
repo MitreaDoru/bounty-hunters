@@ -1,23 +1,17 @@
-import style from './Profile.module.css'
+import style from './ProfileContent.module.css'
 import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
-
-
-import useData from '../use-data';
+import useData from '../hooks/use-data';
 import userData from '../userData';
 
-
-const Profile = () => {
-
+const ProfileContent = () => {
     const [key, setKey] = useState()
-
     const { personalProfile, profiles } = useData(key, 'employees')
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log(user);
                 setKey(user.uid)
             }
         });
@@ -26,7 +20,6 @@ const Profile = () => {
     const allProfiles = profiles.map(profile => {
         return (
             <div key={profile.id} className={style.content}>
-
                 <p>Nume: {profile ? profile.nume : ''}</p>
                 <p>Prenume: {profile ? profile.prenume : ''}</p>
                 <p>Telefon: {profile ? profile.telefon : ''}</p>
@@ -40,11 +33,9 @@ const Profile = () => {
         )
     })
 
-
     return (
         <div className={style.profile}>
             {personalProfile && (personalProfile.owner ? '' : <div className={style.content}>
-
                 <p>Nume: {personalProfile ? personalProfile.nume : ''}</p>
                 <p>Prenume: {personalProfile ? personalProfile.prenume : ''}</p>
                 <p>Telefon: {personalProfile ? personalProfile.telefon : ''}</p>
@@ -54,12 +45,10 @@ const Profile = () => {
                 <p>Angajat: {personalProfile ? personalProfile.hire : ''}</p>
             </div>)}
             <div className={style.grid}>
-
                 {personalProfile && (personalProfile.owner ? allProfiles : '')}
             </div>
-
         </div>
     )
 }
 
-export default Profile
+export default ProfileContent

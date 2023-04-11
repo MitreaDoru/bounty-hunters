@@ -1,10 +1,10 @@
-import style from "./LoginForm.module.css"
+import style from "./SigninContent.module.css"
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from '../firebase'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
-const LoginForm = () => {
+const SigninContent = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,12 +16,11 @@ const LoginForm = () => {
             const authUser = getAuth();
             const emailVerified = authUser.currentUser.emailVerified;
             if (emailVerified) {
-
-                navigate('/bounty-hunters/home')
+                navigate('/bounty-hunters')
                 setError(false)
             } else {
                 auth.signOut()
-                navigate('/bounty-hunters/login')
+                navigate('/bounty-hunters/signin')
                 alert('Verify your email')
             }
         }).catch((error) => {
@@ -44,7 +43,7 @@ const LoginForm = () => {
                     </div>
                     {error && <p>Wrong email or password</p>}
                     <div className={style.button}>
-                        <Link to='/bounty-hunters/home'>Continue offline</Link>
+                        <Link to='/bounty-hunters'>Continue offline</Link>
                         <button type="submit">Sign in</button>
                     </div>
                 </form>
@@ -53,4 +52,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm
+export default SigninContent

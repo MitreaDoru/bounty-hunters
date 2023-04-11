@@ -1,18 +1,15 @@
-import style from "./SigninForm.module.css"
+import style from "./SignupContent.module.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase'
 import { getAuth, sendEmailVerification } from "firebase/auth";
+import useForm from "../hooks/use-form";
 
-import useForm from "../use-form";
-const SigninForm = () => {
+
+const SignupContent = () => {
     const [dbError, setDbError] = useState(false)
     const navigate = useNavigate();
-
-
-
-
 
     const {
         value: enteredEmail,
@@ -46,16 +43,13 @@ const SigninForm = () => {
             return
         }
         try {
-
             await createUserWithEmailAndPassword(auth, enteredEmail, enteredPassword).then((userCredential) => {
-
                 const authUser = getAuth();
                 sendEmailVerification(authUser.currentUser)
                     .then((user) => {
-
                         alert("Verification email sent")
                     });
-                navigate('/bounty-hunters/login')
+                navigate('/bounty-hunters/signin')
                 emailReset()
                 passwordReset()
                 setDbError(false)
@@ -68,8 +62,6 @@ const SigninForm = () => {
         }
     }
 
-
-
     return (
         <section>
             <div className={style.container}>
@@ -77,18 +69,13 @@ const SigninForm = () => {
                     <div className={style.username}>
                         <label htmlFor="email-adress" >E-mail adress</label>
                         <input type="text" label='email-adress' onBlur={emailInputBlur} value={enteredEmail} onChange={emailChangeHandler} required placeholder="Email adress" className={emailStyle}></input>
-                        {(emailIsInvalid || dbError) && <p>Wrong format</p>}
+                        {(emailIsInvalid || dbError) && <p>Wrong format / this email is used</p>}
                     </div>
                     <div className={style.password}>
                         <label htmlFor="password">Password</label>
                         <input type="password" label="Create password" onBlur={passwordInputBlur} value={enteredPassword} onChange={passwordChangeHandler} required placeholder="Password" className={passwordStyle}></input>
                         {passwordIsInvalid && <p>Try to use a long password</p>}
                     </div>
-                    {/* <div className={style.password}>
-                        <label>Repeat Password</label>
-                        <input type="text"></input>
-                    </div> */}
-
                     <div className={style.button}>
                         <button disabled={!formIsValid} type="submit">Sign up</button>
 
@@ -99,4 +86,4 @@ const SigninForm = () => {
     )
 }
 
-export default SigninForm
+export default SignupContent

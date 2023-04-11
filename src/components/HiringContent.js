@@ -1,4 +1,4 @@
-import style from './Hiring.module.css'
+import style from './HiringContent.module.css'
 import service from '../img/hiring.jpg'
 import { useEffect, useState } from 'react';
 
@@ -6,9 +6,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 import { db } from '../firebase'
 import { ref, set, } from 'firebase/database'
-import useData from '../use-data';
+import useData from '../hooks/use-data';
 
-const Hiring = () => {
+const HiringContent = () => {
 
     const [nume, setNume] = useState('')
     const [prenume, setPrenume] = useState('')
@@ -66,21 +66,21 @@ const Hiring = () => {
                     Daca doresti sa ni te alaturi ca Ajutor-Mecanic, ai nevoie de 50 de luni in oras.
                 </p>
                 <p>
-                    Daca esti pasionat de masini si pur si simplu vrei sa petreci niste timp de calitate cu oameni de calitate, te asteptam in vizita!          </p>
+                    Daca esti pasionat de masini si pur si simplu vrei sa petreci niste timp de calitate cu oameni de calitate, te asteptam in vizita!</p>
             </div>
             {key && <form onSubmit={dataAddOn} className={style.description}>
                 <label htmlFor='nume'>Nume</label>
-                <input type='text' name='nume' placeholder='Nume' value={nume} onChange={(e) => setNume(e.target.value)}></input>
+                <input type='text' name='nume' placeholder='Nume' value={nume} onChange={(e) => setNume(e.target.value)} required />
                 <label htmlFor='prenume'>Prenume</label>
-                <input type='text' name='prenume' placeholder='Prenume' value={prenume} onChange={(e) => setPrenume(e.target.value)}></input>
+                <input type='text' name='prenume' placeholder='Prenume' value={prenume} onChange={(e) => setPrenume(e.target.value)} required />
                 <label htmlFor='CNP'>CNP</label>
-                <input type='number' name='CNP' placeholder='CNP' value={cod} onChange={(e) => setCod(e.target.value)}></input>
+                <input type='number' name='CNP' placeholder='CNP' value={cod} onChange={(e) => setCod(e.target.value)} required />
                 <label htmlFor='luni'>Numar de luni</label>
-                <input type='number' name='luni' placeholder='Luni' value={luni} onChange={(e) => setLuni(e.target.value)}></input>
+                <input type='number' name='luni' placeholder='Luni' value={luni} onChange={(e) => setLuni(e.target.value)} required />
                 <label htmlFor='telefon'>Numar de telefon</label>
-                <input type='text' name='telefon' placeholder='Telefon' value={telefon} onChange={(e) => setTelefon(e.target.value)}></input>
+                <input type='text' name='telefon' placeholder='Telefon' value={telefon} onChange={(e) => setTelefon(e.target.value)} required />
                 <label htmlFor='masina'>Masina de drift</label>
-                <input type='text' name='masina' placeholder='Masina' value={masina} onChange={(e) => setMasina(e.target.value)}></input>
+                <input type='text' name='masina' placeholder='Masina' value={masina} onChange={(e) => setMasina(e.target.value)} required />
                 {personalProfile && <p>Se reseteaza datele daca dai iar submit la alte date</p>}
                 <button type='submit'>Submit</button>
             </form>}
@@ -88,4 +88,4 @@ const Hiring = () => {
     )
 }
 
-export default Hiring
+export default HiringContent

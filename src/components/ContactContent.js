@@ -1,9 +1,9 @@
-import style from './Contact.module.css'
+import style from './ContactContent.module.css'
 import luci from '../img/Luci.jpg'
 import ale from '../img/Ale.jpg'
 
 
-const Contact = () => {
+const ContactContent = () => {
     return (
         <div className={style.contact}>
             <div className={style.ale}>
@@ -24,4 +24,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default ContactContent

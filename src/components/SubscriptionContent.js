@@ -1,13 +1,14 @@
-import style from './Subscription.module.css'
+import style from './SubscriptionContent.module.css'
 import subscription from '../img/subscription.jpg'
 import { useState, useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase'
-import useData from '../use-data'
+import useData from '../hooks/use-data'
 import userData from '../userData'
 import { db } from '../firebase'
 import { ref, set, } from 'firebase/database'
-const Subscription = () => {
+
+const SubscriptionContent = () => {
 
     const [key, setKey] = useState()
     const [carNumber, setCarNumber] = useState('')
@@ -56,7 +57,6 @@ const Subscription = () => {
                 <button onClick={() => { userData.updateDataSubscription(profile.id, profile.carNumber, profile.uniqueCode, profile.date, profile.expirationDate, profile.hour, 'platit') }}>Platit</button>
             </div>
         )
-
     })
 
     const personalSubscription =
@@ -71,16 +71,16 @@ const Subscription = () => {
 
     const personalInputSubscription = <form onSubmit={handleSubmit} className={style.info}>
         <label htmlFor='numar-masina'>Numar masina</label>
-        <input type='text' nume='numar-masina' value={carNumber} placeholder='LS XXXXX' onChange={(e) => setCarNumber(e.target.value)}></input>
+        <input type='text' nume='numar-masina' value={carNumber} placeholder='LS XXXXX' onChange={(e) => setCarNumber(e.target.value)} required />
         <label htmlFor='cnp'>CNP</label>
-        <input type='text' nume='cnp' placeholder='CNP/IBAN' value={uniqueCode} onChange={(e) => setUniqueCode(e.target.value)} ></input>
+        <input type='text' nume='cnp' placeholder='CNP/IBAN' value={uniqueCode} onChange={(e) => setUniqueCode(e.target.value)} required />
         <label htmlFor='Hour'>Ora</label>
-        <input type='hour' name='hour' placeholder='Ora curenta' value={hour} onChange={(e) => setHour(e.target.value)} ></input>
+        <input type='hour' name='hour' placeholder='Ora curenta' value={hour} onChange={(e) => setHour(e.target.value)} required />
         <label htmlFor='date'>Data curenta</label>
-        <input type='date' name='date' value={date} onChange={(e) => setDate(e.target.value)} ></input>
+        <input type='date' name='date' value={date} onChange={(e) => setDate(e.target.value)} required />
         <label htmlFor='date'>Data Expirare</label>
-        <input type='date' name='date' value={expirationDate} onChange={(e) => setExpirationDate(e.target.value)} ></input>
-        {personalProfile && <p>Se reseteaza datele daca dai iar submit la alte date</p>}
+        <input type='date' name='date' value={expirationDate} onChange={(e) => setExpirationDate(e.target.value)} required />
+        {personalProfile && <p>Pierzi abonamentul curent daca dai submit la alte date!</p>}
         <button type='submit'>Submit</button>
     </form>
 
@@ -107,4 +107,4 @@ const Subscription = () => {
     )
 }
 
-export default Subscription
+export default SubscriptionContent

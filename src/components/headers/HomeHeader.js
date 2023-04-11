@@ -2,8 +2,8 @@ import style from './HomeHeader.module.css'
 import { Outlet, Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from '../firebase';
-import useData from '../use-data';
+import { auth } from '../../firebase';
+import useData from '../../hooks/use-data';
 
 const HomeHeader = () => {
     const [showLogout, setShowLogout] = useState(false)
@@ -44,12 +44,11 @@ const HomeHeader = () => {
 
             }
         });
-
     }, [])
 
     const handleLogout = () => {
         signOut(auth).then(() => {
-            navigate("/bounty-hunters/home");
+            navigate("/bounty-hunters");
         }).catch((error) => {
 
         });
@@ -74,13 +73,13 @@ const HomeHeader = () => {
                             <Link to='/bounty-hunters/subscription'>Subscription</Link>
                             <Link to='/bounty-hunters/contact'>Contact</Link>
                             {showLogout ? <Link to='/bounty-hunters/profile'>Profile</Link> : ''}
-                            {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Sign in</Link>}
+                            {showLogout ? <Link onClick={handleLogout}>Sign out</Link> : <Link to='/bounty-hunters/signin'>Sign in</Link>}
                         </li>
                     </ul>
                     <div className={style.menuBtn}>
                         <ul>
                             <li>
-                                <Link to='/bounty-hunters/home'> Menu</Link>
+                                <Link to='/bounty-hunters'> Menu</Link>
                                 <ul >
                                     <li><Link to="/bounty-hunters/hiring">Hiring</Link></li>
                                     <li><Link to='/bounty-hunters/about'>About</Link></li>
@@ -88,7 +87,7 @@ const HomeHeader = () => {
                                     <li><Link to='/bounty-hunters/subscription'>Subscription</Link></li>
                                     <li><Link to='/bounty-hunters/contact'>Contact</Link></li>
                                     {showLogout ? <li> <Link to='/bounty-hunters/profile'>Profile</Link></li> : ''}
-                                    {showLogout ? <Link onClick={handleLogout}>Logout</Link> : <Link to='/bounty-hunters/login'>Login</Link>}
+                                    {showLogout ? <Link onClick={handleLogout}>Sign out</Link> : <Link to='/bounty-hunters/signin'>Login</Link>}
                                 </ul>
                             </li>
                         </ul>
@@ -96,7 +95,6 @@ const HomeHeader = () => {
 
                 </nav>
             </header>
-
             <Outlet />
         </>
     )

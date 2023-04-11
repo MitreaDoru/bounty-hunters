@@ -1,11 +1,10 @@
-import style from './About.module.css'
+import style from './AboutContent.module.css'
 import silvia from '../img/about.jpg'
 import location from '../img/Service-map.jpg'
-const About = () => {
+const AboutContent = () => {
     return (
         <div className={style.about}>
             <div className={style.image}>
-
                 <img src={silvia} alt='Silvia-S13' width='1920' height='941' />
             </div>
             <div className={style.location}>
@@ -16,4 +15,4 @@ const About = () => {
     )
 }
 
-export default About
+export default AboutContent

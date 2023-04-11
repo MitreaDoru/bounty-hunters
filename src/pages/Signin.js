@@ -1,11 +1,12 @@
-import SigninForm from '../components/SignForm'
+import SigninContent from '../components/SigninContent'
 
 const Signin = () => {
     return (
         <div>
-            <SigninForm />
+            <SigninContent />
         </div>
     )
 }
+
 
 export default Signin
