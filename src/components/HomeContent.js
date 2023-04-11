@@ -1,9 +1,9 @@
 import style from "./HomeContent.module.css"
 import logo from '../img/logo.jpg'
 import sedinta from '../img/home-sedinta.jpg'
-import plecare from '../img/home31.jpg'
-import alimentare from '../img/home21.jpg'
-import formatie from '../img/home11.jpg'
+import plecare from '../img/home3.jpg'
+import alimentare from '../img/home2.jpg'
+import formatie from '../img/home1.jpg'
 import coada from '../img/home4.jpg'
 const HomeContent = () => {
     return (

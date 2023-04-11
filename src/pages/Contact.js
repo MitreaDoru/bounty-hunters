@@ -1,10 +1,10 @@
-import CarsContent from "../components/CarsContent"
+import ContactContent from "../components/ContactContent"
 
 
 const Contact = () => {
     return (
         <>
-            <CarsContent />
+            <ContactContent />
         </>
     )
 }
