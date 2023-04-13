@@ -12,6 +12,7 @@ import Signin from "./pages/Signin";
 import Signup from './pages/Signup';
 import Subscription from "./pages/Subscription";
 import ResetPassword from "./pages/ResetPassword";
+import CarsForSale from "./pages/CarsForSale";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: '/bounty-hunters/hiring', element: <Hiring /> },
       { path: '/bounty-hunters/about', element: <About /> },
       { path: '/bounty-hunters/cars', element: <Cars /> },
+      { path: '/bounty-hunters/carsforsale', element: <CarsForSale /> },
       { path: '/bounty-hunters/subscription', element: <Subscription /> },
       { path: '/bounty-hunters/contact', element: <Contact /> },
       { path: '/bounty-hunters/profile', element: <Profile /> }

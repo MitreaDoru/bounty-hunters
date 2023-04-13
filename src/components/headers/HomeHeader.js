@@ -71,6 +71,7 @@ const HomeHeader = () => {
                             <Link to="/bounty-hunters/hiring">Hiring</Link>
                             <Link to='/bounty-hunters/about'>About</Link>
                             <Link to='/bounty-hunters/cars'>Cars</Link>
+                            <Link to='/bounty-hunters/carsforsale'>For Sale</Link>
                             <Link to='/bounty-hunters/subscription'>Subscription</Link>
                             <Link to='/bounty-hunters/contact'>Contact</Link>
                             {showLogout ? <Link to='/bounty-hunters/profile'>Profile</Link> : ''}
@@ -84,7 +85,13 @@ const HomeHeader = () => {
                                 <ul >
                                     <li><Link to="/bounty-hunters/hiring">Hiring</Link></li>
                                     <li><Link to='/bounty-hunters/about'>About</Link></li>
-                                    <li><Link to='/bounty-hunters/cars'>Cars</Link></li>
+                                    <li><Link to='/bounty-hunters/cars'>Cars</Link>
+                                        <ul>
+                                            <li>
+                                                <Link to='/bounty-hunters/carsforsale'>For Sale</Link>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li><Link to='/bounty-hunters/subscription'>Subscription</Link></li>
                                     <li><Link to='/bounty-hunters/contact'>Contact</Link></li>
                                     {showLogout ? <li> <Link to='/bounty-hunters/profile'>Profile</Link></li> : ''}
