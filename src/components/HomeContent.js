@@ -5,6 +5,7 @@ import plecare from '../img/home3.jpg'
 import alimentare from '../img/home2.jpg'
 import formatie from '../img/home1.jpg'
 import coada from '../img/home4.jpg'
+
 const HomeContent = () => {
     return (
         <div className={style.home}>

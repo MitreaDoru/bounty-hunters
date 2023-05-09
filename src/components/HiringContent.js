@@ -1,7 +1,6 @@
 import style from './HiringContent.module.css'
 import service from '../img/hiring.jpg'
 import { useEffect, useState } from 'react';
-
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 import { db } from '../firebase'
@@ -9,7 +8,6 @@ import { ref, set, } from 'firebase/database'
 import useData from '../hooks/use-data';
 
 const HiringContent = () => {
-
     const [nume, setNume] = useState('')
     const [prenume, setPrenume] = useState('')
     const [cod, setCod] = useState('')
@@ -46,10 +44,6 @@ const HiringContent = () => {
             }
         });
     }, [])
-
-
-
-
 
     return (
         <div className={style.hiring}>

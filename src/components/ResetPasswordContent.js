@@ -21,7 +21,6 @@ const ResetPasswordContent = () => {
         })
     }
 
-
     return (
         <section>
             <div className={style.container}>

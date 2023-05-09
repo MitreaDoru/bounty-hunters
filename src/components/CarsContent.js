@@ -7,6 +7,7 @@ import car4 from '../img/car4.jpg'
 import car5 from '../img/car5.jpg'
 import car6 from '../img/car6.jpg'
 import car7 from '../img/car7.jpg'
+
 const CarsContent = () => {
     return (
         <div className={style.content}>

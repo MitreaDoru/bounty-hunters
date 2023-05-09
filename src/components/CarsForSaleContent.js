@@ -1,6 +1,4 @@
-
 import style from './CarsForSaleContent.module.css'
-
 
 const CarsForSaleContent = () => {
     return (

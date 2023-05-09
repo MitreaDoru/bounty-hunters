@@ -84,7 +84,6 @@ const SubscriptionContent = () => {
         <button type='submit'>Submit</button>
     </form>
 
-
     return (
         <div className={style.subscription}>
             <div className={style.title}>

@@ -1,6 +1,7 @@
 import style from './AboutContent.module.css'
 import silvia from '../img/about.jpg'
 import location from '../img/Service-map.jpg'
+
 const AboutContent = () => {
     return (
         <div className={style.about}>

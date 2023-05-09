@@ -6,7 +6,6 @@ import { auth } from '../firebase'
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import useForm from "../hooks/use-form";
 
-
 const SignupContent = () => {
     const [dbError, setDbError] = useState(false)
     const navigate = useNavigate();

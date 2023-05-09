@@ -2,7 +2,6 @@ import style from './ContactContent.module.css'
 import luci from '../img/Luci.jpg'
 import ale from '../img/Ale.jpg'
 
-
 const ContactContent = () => {
     return (
         <div className={style.contact}>
