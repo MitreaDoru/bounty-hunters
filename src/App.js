@@ -14,7 +14,6 @@ import Subscription from "./pages/Subscription";
 import ResetPassword from "./pages/ResetPassword";
 import CarsForSale from "./pages/CarsForSale";
 
-
 const router = createBrowserRouter([
   {
     path: '/bounty-hunters', element: <AuthHeader />, children: [

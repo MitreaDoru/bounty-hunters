@@ -4,8 +4,9 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database"
 import firebase from 'firebase/compat/app'
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 const firebaseConfig = {
-    apiKey: "AIzaSyC3X9EKGiKdEjylN7oKnEF1NteunycLBcQ",
+    apiKey: API_KEY,
     authDomain: "bountyhunters-1dc0c.firebaseapp.com",
     databaseURL: "https://bountyhunters-1dc0c-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "bountyhunters-1dc0c",
